@@ -6,9 +6,9 @@ public class Book {
     private String publisher;
     private int isbn;
     private Boolean isBorrowed = false;
-    private String information;
+    protected String information;
 
-    public Book(String title, String author, String publisher, int isbn, Boolean isBorrowed, String inforamtion) {
+    public Book(String title, String author, String publisher, int isbn, Boolean isBorrowed, String information) {
         this.title = title;
         this.author = author;
         this.publisher = publisher;
@@ -22,11 +22,9 @@ public class Book {
     public String getTitle() {
         return title;
     }
+
     public String getInformation(){
         return information;
-    }
-    public String setInformation(String information) {
-        this.information = information;
     }
 
     public void setTitle(String title) {
@@ -53,8 +51,8 @@ public class Book {
         return isbn;
     }
 
-    public void setIsbn(String isbn) {
-        this.isbn = Integer.parseInt(isbn);
+    public void setIsbn(int isbn) {
+        this.isbn = isbn;
     }
 
     public Boolean isBorrowed() {
@@ -69,6 +67,7 @@ public class Book {
         System.out.println("Publisher: " + publisher);
         System.out.println("Isbn: " + isbn);
         System.out.println("Borrowed: " + isBorrowed);
+        System.out.println("Information: " + information);
 
     }
 
