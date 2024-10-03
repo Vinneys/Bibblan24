@@ -7,8 +7,6 @@ import java.util.Scanner;
 public class BookService {
     List<Book> books = new ArrayList<Book>();
 
-    Scanner sc = new Scanner(System.in);
-
     public void addBook(Book book) {
         books.add(book);
     }
@@ -24,8 +22,12 @@ public class BookService {
     }
 
     public void printBooks() {
+
         for (Book book : books) {
-            System.out.println(book);
+            if (book.isBorrowed()) {
+                System.out.println(book.getTitle() + " " + book.getAuthor() + " " + book.getPublisher());
+            }else
+            System.out.println("This  books is not Avalible " + book.getTitle());
         }
     }
 }
