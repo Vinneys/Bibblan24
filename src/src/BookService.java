@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 public class BookService {
     List<Book> books = new ArrayList<Book>();
+
     Scanner sc = new Scanner(System.in);
 
     public void addBook(Book book) {
@@ -13,10 +14,10 @@ public class BookService {
     }
 
     public Book addTenBook() {
-        String title = "eqfa";
-        String author = "aef";
+        String title = "";
+        String author = "";
         int isbn = 0;
-        String publisher = "eafef";
+        String publisher = "";
         boolean available = true;
 
         return new Book(title, author, publisher, isbn,available );
